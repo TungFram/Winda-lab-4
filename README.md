@@ -3,9 +3,7 @@
 
 ### Общая инфа:
 #### **Протестировал, всё работает!**
-#### Важно, чтобы не было старой записи об обработке отказа. Чтобы убрать ее (на обоих серваках), [вот ссылочка](https://social.technet.microsoft.com/Forums/en-US/856a7076-ebb4-40b8-b6ec-8a84dcbd766e/how-to-remove-all-failover-scopes-using-powershell?forum=winserveripamdhcpdns), там в ответе гайд.
-
-Чтобы заработало, поменяйте адреса серваков (IPv4Adress) на те, которые выводятся Get-ADComputer -Properties * -Filter * 
+#### Важно, чтобы не было старой записи об обработке отказа. Чтобы убрать ее (на обоих серваках), [вот ссылочка](https://social.technet.microsoft.com/Forums/en-US/856a7076-ebb4-40b8-b6ec-8a84dcbd766e/how-to-remove-all-failover-scopes-using-powershell?forum=winserveripamdhcpdns), там в ответе гайд. Чтобы заработало, поменяйте адреса серваков (IPv4Adress) на те, которые выводятся Get-ADComputer -Properties * -Filter * , имена и все остальное он найдет сам.
 
 Если ролей нет и мы запускаем скрипт с начала, то *будет пару ошибок* о том, что не нашли что-то. Это нормально, я оборачивал их в try-catch, но они все равно выбрасываются, хрен его знает.
 Если запускать еще раз, то, вроде, нормально все отрабатывает.
